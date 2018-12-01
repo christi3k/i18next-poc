@@ -1,6 +1,6 @@
 {
   "Flexible connection to": "Flexible Verbindung zu ",
-  "i18next provides:": "i18next bietet:",
+  "i18next provides:": "i18next&nbsp;<strong>bietet:</strong>",
   "backend": "backend",
   "(loading translations via xhr, …)": " (Übersetzungen via xhr laden, …)",
   "Optional": "Optional ",
@@ -32,5 +32,10 @@
   "dynamically added:": "Dynamisch hinzugefügt:",
   "Works on title": "Funktioniert auf Titel",
   "translated placeholder": "Übersetzter Platzhalter",
-  "Using options:": "\n      Nutzung von Optionen:\n      "
+  "Using options:": "\n      Nutzung von Optionen:\n      ",
+  "CLICK ME INNER": "KLICK MICH INNER",
+  "big a": "grosses a",
+  "a.png": "b.jpeg",
+  "statistic": "statistik",
+  "explore the link": "Link hat anderen href"
 }
