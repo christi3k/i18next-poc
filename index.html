@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="bundle.js"></script>
+    <script src="i18nextify.min.js"></script>
+    <script>
+      window.i18nextify.init({
+        backend: {
+          loadPath: 'locales/{{lng}}/{{ns}}.json'
+        }
+      });
+    </script>
+  </head>
+  <body class="landing-page" style='display: none'>
+    <div>
+      <a href='?lng=de'>deutsch</a>
+      <span> | </span>
+      <a href='?lng=en'>english</a>
+    </div>
+    <div>
+      <p>i18next provides:</p>
+    </div>
+    <div>
+      <ul>
+        <li>Flexible connection to <a href="http://i18next.com/docs/ecosystem/#backends">backend</a> (loading translations via xhr, …)</li>
+        <li>Optional <a href="http://i18next.com/docs/ecosystem/#caches">caching</a>, user <a href="/docs/ecosystem/#languagedetector">language detection</a>, …</li>
+        <li>Proper <a href="http://i18next.com/translate/pluralSimple/">pluralizations</a></li>
+        <li>Translation <a href="http://i18next.com/translate/context/">context</a></li>
+        <li><a href="http://i18next.com/translate/nesting/">Nesting</a>, <a href="http://i18next.com/translate/interpolation/">Variable replacement</a></li>
+        <li>Flexibility: prefer <a href="http://i18next.com/translate/">keybased</a> or <a href="http://i18next.com/translate/keyBasedFallback/">gettext</a> style? No problem…</li>
+        <li>Extensibility: eg. <a href="http://i18next.com/docs/ecosystem/#postprocessors">sprintf</a></li>
+        <li>…</li>
+      </ul>
+    </div>
+    <hr />
+    <div>
+      Some more tests on attributes:
+      <h4>title:</h4>
+      <a href="http://i18next.com/docs/ecosystem/#postprocessors" title="Works on title">hover me</a>
+      <h4>placeholder:</h4>
+      <input type="text" placeholder="translated placeholder" />
+    </div>
+    <hr />
+    <div>
+      Using options:
+      <p i18next-options='{"foo": "bar"}'>foo {{foo}}</p>
+      <a i18next-options='{"foo": "bar"}' href="http://i18next.com/docs/ecosystem/#postprocessors" title="foo {{foo}}">hover me</a>
+      <div i18next-options='{"foo": "bar"}'>
+        <p i18next-options='{"foo2": "bar2"}'>foo {{foo}}; foo2 {{foo2}}</p>
+      </div>
+    </div>
+    <hr />
+    <div>dynamically added:</div>
+    <script>
+      // window.virtualDomI18next.run(document.getElementById('react-mount'));
+
+      setTimeout(function () {
+        var ele = document.body;
+
+        var btn = document.createElement("BUTTON");
+        var t = document.createTextNode("CLICK ME");
+        btn.appendChild(t);
+
+        console.log('appendingFromOutside');
+        ele.appendChild(btn);
+      }, 5000);
+    </script>
+  </body>
+</html>
